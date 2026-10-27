@@ -24,6 +24,12 @@ pipeline {
                 sh 'ls -lh target/*.war'
             }
         }
+	
+	stage('Deploy to Tomcat') {
+	    steps {
+		sh '''docker cp target/java-web-app-1.0.war my-tomcat:/usr/local/tomcat/webapps/java-web-app.war'''
+	    }
+	}
     }
  
     post {
