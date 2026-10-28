@@ -18,7 +18,7 @@ public class HelloServlet extends HttpServlet {
         response.setContentType("text/html");
  
         response.getWriter().println(
-            "<h1>Hello from Day 3 CI/CD!</h1>"
+            "<h1>Hello from Day 3 CI/CD</h1>"
         );
     }
 }
